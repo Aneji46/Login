@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="400dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:scaleY="4"
+        android:scaleX="4"
+        android:text="Feedback form"
+        android:id="@+id/head"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Id:"
+        android:textSize="23dp"
+        android:layout_below="@+id/head"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/email"
+        android:hint="email@domain.com"
+        android:drawableLeft="@drawable/ic_mail"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/head"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment"
+        android:text="Comment/message"
+        android:layout_marginTop="10dp"
+        android:textSize="23dp"
+        android:layout_below="@id/email"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your message"
+        android:id="@+id/commentText"
+        android:layout_below="@+id/comment"
+        android:lines="5"
+        android:gravity="fill_horizontal"
+        android:textColorHighlight="@color/colorPrimary"/>
+    <RatingBar
+        android:layout_below="@+id/commentText"
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:background="#4dDAD590"
+        android:stepSize="0.5"
+        android:padding="5dp"
+        android:rating="3.5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"/>
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="10dp"
+        android:background="#DF9CDF4F"
+        android:padding="10dp"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
